@@ -25,6 +25,8 @@
 /* HEADER */
 
 .top-container {
+    display: block;
+    width: 100;
     background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
