@@ -30,9 +30,10 @@
     background-size: cover;
     background-color: #000000;
     background-position: center;
+    width: 100%;
     position: relative;
     z-index: 0;
-    padding: 36px 245px 147px 245px;
+    /* padding: 36px 245px 147px 245px; */
     margin: 0 auto;
 }
 
@@ -50,6 +51,7 @@
 .header-container {
     display: flex;
     justify-content: center;
+    padding: 36px 254px;
 }
 
 .logo {
@@ -82,6 +84,7 @@ ul li a {
     display: flex;
     justify-content: center;
     margin-top: 90px;
+    padding-bottom: 147px;
     /* Рассчитать точно! */
 
 }
@@ -128,8 +131,6 @@ ul li a {
 .article-image img {
     position: relative;
     left: 0;
-    width: 381px;
-    height: 294px;
 }
 
 .article-content {
@@ -138,12 +139,9 @@ ul li a {
     width: 369px;
 }
 
-.article-tag {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.article-tag h3 {
+.article-tag li {
+    display: inline-block;
+    list-style-type: none;
     font-size: 14px;
     font-family: "OpenSans-Bold", sans-serif;
     margin-bottom: 15px;
@@ -152,7 +150,43 @@ ul li a {
     margin-right: 20px;
 }
 
-.article-title h2 {
+.article-tag li a:link {
+    font-size: 14px;
+    font-family: "OpenSans-Bold", sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    margin-right: 20px;
+}
+
+.article-tag li a:visited {
+    font-size: 14px;
+    font-family: "OpenSans-Bold", sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    margin-right: 20px;
+}
+
+.article-tag li a:hover {
+    font-size: 14px;
+    font-family: "OpenSans-Bold", sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    margin-right: 20px;
+}
+
+.article-tag li a:active {
+    font-size: 14px;
+    font-family: "OpenSans-Bold", sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    margin-right: 20px;
+}
+
+h2 {
     display: block;
     font-size: 20px;
     font-family: "OpenSans-Bold", sans-serif;
@@ -197,9 +231,7 @@ ul li a {
     margin-bottom: 1060px;
 }
 
-.section-title h3 {
-    display: block;
-    position: relative;
+.section-title {
     font-family: "OpenSans-Bold", sans-serif;
     font-size: 14px;
     text-transform: uppercase;
@@ -207,7 +239,7 @@ ul li a {
 }
 
 
-.section-title h3::after {
+.section-title::after {
     content: "";
     display: block;
     width: 66px;
@@ -235,17 +267,13 @@ ul li a {
 
 }
 
-.item-image img {
-    width: 70px;
-}
-
 .item-date {
     font-family: "OpenSans-Regular", sans-serif;
     font-size: 12px;
     color: #a2a2a2;
 }
 
-.item-title h3 {
+.item-content h3 {
     font-family: "OpenSans-Bold", sans-serif;
     font-size: 14px;
     text-transform: uppercase;
@@ -284,6 +312,21 @@ ul li a {
     border: none;
 }
 
+.primary-button:active {
+    position: absolute;
+    box-sizing: border-box;
+    width: 46px;
+    height: 48px;
+    top: 0;
+    right: 0;
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+    background-size: 18px;
+    background-color: lightgrey;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
 .email {
     display: block;
     box-sizing: border-box;
@@ -313,14 +356,29 @@ ul li a {
     text-transform: uppercase;
 }
 
-.tag-container ul {
+.secondary-button:active {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 60px;
+    top: 0;
+    right: 0;
+    background-color: lightgrey;
+    border: none;
+    font-family: "OpenSans-Bold", sans-serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.tag-list {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     margin-bottom: 60px;
 }
 
-.tag-container ul li {
+.tag-list li {
     border: 3px solid #eeeeee;
     padding: 8px 13px;
     font-family: "OpenSans-Bold", sans-serif;
@@ -330,12 +388,12 @@ ul li a {
     margin-bottom: 6px;
 }
 
-.theme-container ul {
+.theme-list {
     list-style: none;
     font-family: "OpenSans-Bold", sans-serif;
 }
 
-.theme-container ul li {
+.theme-list li {
     border-bottom: 1px solid #eeeeee;
     padding-bottom: 16px;
     font-family: "OpenSans-Bold", sans-serif;
@@ -357,7 +415,7 @@ ul li a {
 
 /* FOOTER */
 
-.footer-container {
+.socials {
     width: 100%;    
     height: 83px;
     background-color: #f4f7f6;
@@ -371,20 +429,61 @@ ul li a {
     margin: auto;
 }
 
+/* SOCIAL MEDIA */
+
 .social-media {
     display: flex;
     justify-content: center;
-    list-style: none;
-}
-
-.social-media img {
-    width: 20px;
 }
 
 .social-media li {
+    list-style-type: none;
+}
+
+.social-media li a {
+    display: block;
+    width: 20px;
+    height: 20px;
     margin-top: 30px;
     margin-right: 35px;
 }
+
+.twitter-icon {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pininterest-icon {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.facebook-icon {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.instagram-icon {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tumblr-icon {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* COPYRIGHT */
 
 .copyright {
     width: 100%;
@@ -399,6 +498,7 @@ ul li a {
 
 .copyright a {
     text-decoration: none;
+    color: #999999;
 }
 
 .copyright a:visited {
