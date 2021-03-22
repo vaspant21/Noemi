@@ -461,9 +461,6 @@
 .theme-list li {
     list-style-type: none;
     font-family: "OpenSans-Bold", sans-serif;
-}
-
-.theme-list li {
     border-bottom: 1px solid #eeeeee;
     padding-bottom: 16px;
     font-family: "OpenSans-Bold", sans-serif;
